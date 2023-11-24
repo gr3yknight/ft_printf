@@ -1,9 +1,8 @@
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-// # include "libft.h"
-
+# include "libft.h"
 
 
 #endif 
