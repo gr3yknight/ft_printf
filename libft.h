@@ -32,7 +32,15 @@ int		ft_atoi(char const *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
 
-int     ft_printf(char const *, ...);
+	//For and ft_Printf
+int     ft_printf(char const *str, ...);
+	int		ft_putnbr(long n, int base);
+	int     ft_putchar(char c);
+	int     ft_putstr(char *str);
+	int		ft_putptr(char *str);
+	int		ft_spf(char spf, va_list args);
+
+
 
 char	*ft_itoa(int n);
 char	*ft_strdup(char const *src);
@@ -46,8 +54,9 @@ char	*ft_strnstr(char const *haystack, char const *needle, size_t n);
 
 char	**ft_split(char const *s, char c);
 
-void	ft_bzero(void *s, size_t n);
+
 void	ft_putnbr_fd(int n, int fd);
+void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
