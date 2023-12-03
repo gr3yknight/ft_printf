@@ -1,8 +1,22 @@
 #include "libft.h"
 
-int ft_unsigned(unsigned long nb, int base)
+int ft_unsigned(unsigned long nb)
 {
-    if (nb >= 10)
-	    ft_putnbr(nb, 10);
-    return(ft_putchar(nb % 10 + '0'));
+	static int  c;
+
+	c = 0;
+	c += ft_putnbr(nb);
+	return (c);
+}
+
+int main()
+{
+	unsigned int nb = -19;
+	int j = ft_unsigned(nb);
+	printf("\n");
+	int k = printf("%u", nb);
+	printf("\n");
+	printf("%d", j);
+	printf("\n");
+	printf("%d", k);
 }

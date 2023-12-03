@@ -29,15 +29,15 @@ int ft_printf(char const *str, ...)
 		else if (*s == '%' && *(++s) == 'i')
 			l += va_arg(args, int);
 		else if (*s == '%' && *(++s) == 'd')
-			l = va_arg(args, long);
+			l += va_arg(args, long);
 		else if (*s == '%' && *(++s) == 's')
-			l = va_arg(args, char *);
+			l += (va_arg(args, char *));
 		else if (*s == '%' && *(++s) == 'c')
-			l = (va_arg(args, int), 10);
+			l += (va_arg(args, int));
 		else if (*s == '%' && *(++s) == 'x')
-			l = (va_arg(args, unsigned int), 10);
+			l = (va_arg(args, unsigned int));
 		else if (*s == '%' && *(++s) == 'u')
-			l = (va_arg(args, unsigned int), 16);
+			l = (va_arg(args, unsigned int));
 		else if (*s == '%' && *(++s) == 'p')
 			l = va_arg(args, void *);
 		s++;
