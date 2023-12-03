@@ -34,10 +34,10 @@ int		ft_strncmp(char const *s1, char const *s2, size_t n);
 
 	//For and ft_Printf
 int     ft_printf(char const *str, ...);
-	int		ft_putnbr(long n, int base);
+	int		ft_putnbr(long nb);
 	int     ft_putchar(char c);
 	int     ft_putstr(char *str);
-	int		ft_putptr(char *str);
+	int		ft_putptr(unsigned long l);
 	int		ft_spf(char spf, va_list args);
 
 
