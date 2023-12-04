@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int ft_putnbr(long int	nb)
+int ft_putnbr(long nb)
 {
 	static int	c;
 
