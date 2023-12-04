@@ -17,7 +17,8 @@ int ft_printf(char const *str, ...)
 {
 	int     l;
 	char    *s;
-	
+	int		*c;
+
 	s = (char *)str;
 	l = 0;
 	va_list(args);
@@ -25,22 +26,8 @@ int ft_printf(char const *str, ...)
 	while (*s)
 	{
 		if (*s == '%')
-			l += (va_arg(args, int));
-		else if (*s == '%' && *(++s) == 'i')
-			l += va_arg(args, int);
-		else if (*s == '%' && *(++s) == 'd')
-			l += va_arg(args, long);
-		else if (*s == '%' && *(++s) == 's')
-			l += (va_arg(args, char *));
-		else if (*s == '%' && *(++s) == 'c')
-			l += (va_arg(args, int));
-		else if (*s == '%' && *(++s) == 'x')
-			l = (va_arg(args, unsigned int));
-		else if (*s == '%' && *(++s) == 'u')
-			l = (va_arg(args, unsigned int));
-		else if (*s == '%' && *(++s) == 'p')
-			l = va_arg(args, void *);
-		s++;
+			l += ft_spf(*(++s), args);
+
 	}
 	va_end(args);
 	return (l);
