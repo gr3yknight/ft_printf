@@ -1,16 +1,27 @@
-#include "libft.h"
+#include "ft_printf.h"
 
-int ft_putnbr(long nb)
+void ft_putnbr(long nb, int *c)
 {
-	static int	c;
 
-	c = 0;
 	if (nb < 0)
 	{
 		nb *= -1;
-		c += ft_putchar('-');
+		ft_putchar('-', c);
 	}
 	if (nb >= 10)
-		c += ft_putnbr(nb / 10);
-	return (c += ft_putchar(nb % 10 + '0'));
+		ft_putnbr(nb / 10, c);
+	ft_putchar(nb % 10 + '0', c);
 }
+
+// int main()
+// {
+// 	int n = -98256;
+// 	int c = 0;
+// 	ft_putnbr(n, &c);
+// 	printf("\n");
+// 	printf("%d", c);
+// 	printf("\n");
+// 	int j = printf("%d", n);
+// 	printf("\n");
+// 	printf("%d", j);
+// }

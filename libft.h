@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: talhaoui <talhaoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hatalhao <hatalhao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:16:47 by hatalhao          #+#    #+#             */
-/*   Updated: 2023/11/24 16:37:23 by talhaoui         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:17:44 by hatalhao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,6 @@ int		ft_tolower(int c);
 int		ft_atoi(char const *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
-
-	//For and ft_Printf
-int     ft_printf(char const *str, ...);
-	int		ft_putnbr(long nb);
-	int     ft_putchar(char c);
-	int     ft_putstr(char *str);
-	int		ft_putptr(unsigned long l);
-	int		ft_spf(char spf, va_list args);
-
 
 
 char	*ft_itoa(int n);
