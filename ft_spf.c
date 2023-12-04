@@ -15,11 +15,13 @@ void ft_spf(char spf, va_list args, int *l)
     else if (spf == 'u')
         ft_unsigned(va_arg(args, unsigned int), l);
     else if (spf == 'x')
-        ft_puthex(va_arg(args, int), l);
+        ft_puthex(va_arg(args, unsigned long), l);
     else if (spf == 'X')
-        ft_putchex(va_arg(args, int), l);
+        ft_putchex(va_arg(args, unsigned long), l);
     else if (spf == 'p')
-        ft_putptr(va_arg(args, int), l);
+        ft_putptr(va_arg(args, unsigned long), l);
+    // else if (spf == '%')
+    //     ft_putchar('%', l);
     else
-        write(1, &spf, 1);
+        ft_putchar(spf, l);
 }

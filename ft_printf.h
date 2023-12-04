@@ -8,6 +8,7 @@ int	ft_printf(char const *str, ...);
 
 void ft_spf(char spf, va_list args, int *l);
 void ft_unsigned(unsigned int nb, int *c);
+void ft_putchex(unsigned long l, int *c);
 void ft_puthex(unsigned long l, int *c);
 void ft_putptr(unsigned long l, int *c);
 void ft_putstr(char *str, int *c);
