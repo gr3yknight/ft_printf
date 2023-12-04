@@ -26,7 +26,7 @@ int ft_printf(char const *str, ...)
 	while (*s)
 	{
 		if (*s == '%')
-			l += ft_spf(*(++s), args);
+			ft_spf(*(s + 1), args, &l);
 
 	}
 	va_end(args);

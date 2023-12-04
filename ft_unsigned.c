@@ -1,20 +1,6 @@
 #include "ft_printf.h"
 
-int ft_unsigned(unsigned int nb)
+void ft_unsigned(unsigned int nb, int *c)
 {
-	static int  c;
-
-	c = 0;
-	c += ft_putnbr(nb);
-	return (c);
+	ft_putnbr(nb, c);
 }
-
-// int main()
-// {
-// 	unsigned int nb = INT_MAX + 1;
-// 	ft_unsigned(nb);
-// 	printf("\n");
-// 	// printf("my return value :[%d]\n", j);
-// 	// printf("%u\n", nb);
-// 	// printf("original return value :[%d]\n", k);
-// }

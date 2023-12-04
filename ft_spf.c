@@ -2,28 +2,24 @@
 
 #include "ft_printf.h"
 
-int ft_spf(char spf, va_list args)
+void ft_spf(char spf, va_list args, int *l)
 {
-    int counter;
-
-    counter = 0;
     if (spf == 's')
-        counter += ft_putstr(va_arg(args, char *));
+        ft_putstr(va_arg(args, char *), l);
     else if (spf == 'c')
-        counter += ft_putchar(va_arg(args, int));
+        ft_putchar(va_arg(args, int), l);
     else if (spf == 'd')
-        counter += ft_putnbr(va_arg(args, int));
+        ft_putnbr(va_arg(args, int), l);
     else if (spf == 'i')
-        counter += ft_putnbr(va_arg(args, int));
+        ft_putnbr(va_arg(args, int), l);
     else if (spf == 'u')
-        counter += ft_unsigned(va_arg(args, unsigned int));
+        ft_unsigned(va_arg(args, unsigned int), l);
     else if (spf == 'x')
-        counter += ft_puthex(va_arg(args, int));
+        ft_puthex(va_arg(args, int), l);
     else if (spf == 'X')
-        counter += ft_putchex(va_arg(args, int));
+        ft_putchex(va_arg(args, int), l);
     else if (spf == 'p')
-        counter += ft_putptr(va_arg(args, int));
+        ft_putptr(va_arg(args, int), l);
     else
-        counter += write(1, &spf, 1);
-    return (counter);
+        write(1, &spf, 1);
 }
