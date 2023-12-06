@@ -10,7 +10,7 @@ ft_printf.c
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
-		ar -rcs $(NAME) $(OBJS)
+		ar -rcs $(NAME) $?
 
 .PHONY: all clean fclean re
 
@@ -23,3 +23,5 @@ fclean: clean
 		rm -rf $(NAME)
 
 re: fclean all
+
+.SECONDARY: $(OBJS)
