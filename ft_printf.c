@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hatalhao <hatalhao@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/06 14:25:06 by hatalhao          #+#    #+#             */
+/*   Updated: 2023/12/06 14:44:55 by hatalhao         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -5,10 +16,10 @@ int	ft_printf(char const *str, ...)
 {
 	int		l;
 	char	*s;
+	va_list	args;
 
 	s = (char *)str;
 	l = 0;
-	va_list(args);
 	va_start(args, str);
 	while (*s)
 	{
@@ -23,11 +34,4 @@ int	ft_printf(char const *str, ...)
 	}
 	va_end(args);
 	return (l);
-}
-
-int main()
-{
-	char *s = "Hello everyone";
-	ft_printf("%p\n%s", s, s);
-	printf("\n");
 }
