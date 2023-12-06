@@ -1,8 +1,7 @@
 #include "ft_printf.h"
 
-void ft_putnbr(long nb, int *c)
+void	ft_putnbr(long nb, int *c)
 {
-
 	if (nb < 0)
 	{
 		nb *= -1;

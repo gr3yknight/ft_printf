@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void ft_putptr(unsigned long l, int *c)
+void	ft_putptr(unsigned long l, int *c)
 {
 	ft_putstr("0x", c);
 	if (l >= 16)

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void ft_putchex(unsigned long l, int *c)
+void	ft_putchex(unsigned int l, int *c)
 {
 	if (l >= 16)
 		ft_putchex(l / 16, c);
